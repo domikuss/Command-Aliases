@@ -4,7 +4,6 @@
 #include <sourcemod>
 
 #define PATH_TO_CONFIG "configs/CommandAliases.ini"
-#define MAX_ALIASES 32
 
 StringMap g_hCommands;
 ArrayList g_hCmdAlreadyRegs;
@@ -14,7 +13,7 @@ public Plugin myinfo =
 	name = "Command Aliases",
 	author = "Domikuss",
 	description = "Allows you to assign an alternative command name/s",
-	version = "1.0.1",
+	version = "1.0.2",
 	url = "https://github.com/Domikuss/Command-Aliases"
 };
 
@@ -33,7 +32,7 @@ public void OnMapStart()
 void LoadConfig()
 {
 	KeyValues hKvConfig;
-	char sPath[PLATFORM_MAX_PATH], sBuf[MAX_ALIASES*32], sKey[32];
+	char sPath[PLATFORM_MAX_PATH], sBuf[1024], sKey[32];
 
 	g_hCommands.Clear();
 

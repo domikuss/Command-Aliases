@@ -1,5 +1,10 @@
 ## Release Notes
 
+## [1.0.2]
+
+### Removed
+- Unnecessary define MAX_ALIASES
+
 ## [1.0.1]
 
 ### Added
